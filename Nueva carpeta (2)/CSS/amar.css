@@ -1,0 +1,455 @@
+body {
+    font-family: Arial, sans-serif;
+	margin:0;
+	padding:0;
+	background-color:white;
+	background-attachment:fixed;
+}
+
+.carrusel {
+    position: relative;
+    width: 100vw; /* Cambiado a 100vw para ocupar todo el ancho de la ventana */
+    max-width: none; /* Elimina el límite de ancho máximo */
+    margin: 5% 0 0; /* Agrega un margen superior para separarlo del borde superior */
+    overflow: hidden; 
+    margin-top: 20%;
+}
+.caroiousel{
+    width: auto;
+    margin:0px 0px;
+}
+.imagenes {
+    display: flex;
+    transition: transform 0.5s ease;
+    height: 60vh; /* Ajusta esta altura según tus necesidades */
+}
+
+.imagenes img {
+    width: 100%;
+    height: 100%; /* Asegura que las imágenes llenen el contenedor */
+    object-fit: cover; /* Mantiene la proporción de las imágenes */
+    min-width: 100%;
+}
+
+.wrapper {
+    position: fixed; /* Cambia a fixed */
+    top: 28%; /* Ajusta según sea necesario */
+    left: 0;
+    transform: translate(0, 0); /* Cambia esto a 0 */
+    width: 250px;
+    z-index: 1000; /* Asegúrate de que esté en frente de otros elementos */
+    transition: transform 0.3s; /* Para una transición suave */
+}
+
+.sticky {
+    transform: translate(0, 0); /* Mantener en su lugar al hacer scroll */
+}
+
+.wrapper ul {
+    list-style: none;
+}
+
+.wrapper ul li {
+    width: 55px;
+    /* Puedes ajustar este valor si lo deseas */
+    height: 55px;
+    line-height: 75px;
+    margin: 0 5px;
+    /* Aumenta el margen lateral para separarlos más */
+    text-align: center;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 5px solid black;
+    transition: all 0.5s ease;
+}
+
+.wrapper ul li .fa {
+    color: black ;
+    transition: all 0.5s ease;
+}
+.wrapper .facebook{
+    background-color: #375fe8;
+}
+
+.wrapper .twitter {
+    background-color:#39d8e8;
+}
+
+.wrapper .instagram {
+    background-color: #f91fd1;
+}
+.wrapper .google{
+    background-color:#f91803;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 400px;
+    position: absolute;
+    /* Ajusta las posiciones para separarlos verticalmente */
+}
+.container2{
+	
+	display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 0;
+    position: absolute;
+    margin-top: 20%;
+    /* Ajusta las posiciones para separarlos verticalmente */
+}
+
+.container {
+    margin-top: 20%;   
+    top: 602px; /* Ajusta según sea necesario */
+    left: 8%;
+}
+
+.container2 {
+    top: 600px; /* Ajusta para separar del primer contenedor */
+    left: 42%;
+}
+
+.card:hover {
+    transform: scale(1.15);
+}
+
+.card {
+
+    background-color: black;
+    border: 1px solid #ddd;
+    border-radius: 16px;
+    margin: 15px;
+    width: 420px; /* Aumenta el ancho de la tarjeta */
+    height: auto; /* Permite que la altura se ajuste al contenido */
+    box-shadow: 5px 5px 20px rgb(0, 0, 0, 0.7); 
+    transition: transform 0.2s;
+	
+}
+
+.card img {
+    width: 100%; /* Mantiene el ancho de la imagen al 100% del contenedor */
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin-bottom: 10px; /* Espacio entre la imagen y el texto */
+	
+}
+
+
+
+.card-content h3 {
+	color:white;
+    margin: 0;
+    font-size: 1em;
+    text-align: center;
+}
+
+.card-content p {
+	color:white;
+    font-size: 1em;
+    margin: 10px 0;
+}
+
+.main-content {
+    display: flex;
+    flex: 1;
+    margin: 20px;
+}
+
+
+.h22 {
+    margin-top: 5%;
+    font-size: 36px; /* Ajuste de tamaño */
+    text-align: center;
+    border-bottom: 2px solid #3498db; /* Línea decorativa */
+    padding-bottom: 10px; /* Espacio entre el título y la línea */
+}
+
+.hh {
+    color: #1abc9c; /* Color más brillante para el nombre */
+    font-size: 20px; /* Tamaño del texto */
+    text-align: center;
+}
+
+.video-container {
+    margin: 30px 0; /* Espaciado mayor */
+    text-align: center;
+    position: relative; /* Para posicionar el botón */
+}
+
+.vdio {
+    width: 100%; /* Ocupa el ancho del contenedor */
+    height: auto; /* Mantiene la proporción */
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Sombra en el video */
+    transition: transform 0.3s; /* Efecto de transición */
+}
+
+.vdio:hover {
+    transform: scale(1.05); /* Aumento al pasar el ratón */
+}
+
+.control-btn {
+    margin-top: -40px; /* Para que el botón se superponga al video */
+    padding: 10px 20px;
+    background-color: #3498db; /* Color de fondo */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px; /* Tamaño del texto */
+    transition: background-color 0.3s, transform 0.3s; /* Transiciones suaves */
+    position: relative; /* Posicionamiento para el efecto */
+}
+
+.control-btn:hover {
+    background-color: #2980b9; /* Color más oscuro al pasar el ratón */
+    transform: translateY(-2px); /* Movimiento sutil */
+}
+
+.control-btn:active {
+    transform: translateY(1px); /* Efecto de presionado */
+}
+
+.control-btn {
+    margin-top: 10px; /* Espaciado entre el video y el botón */
+    padding: 10px 20px; /* Espaciado interno */
+    background-color: #3498db; /* Color de fondo */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar el ratón */
+    transition: background-color 0.3s; /* Transición suave */
+}
+
+.control-btn:hover {
+    background-color: #2980b9; /* Color más oscuro al pasar el ratón */
+}
+
+
+h4,h2,small,a{
+    margin:0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+
+.footer{
+    position: static;
+    background-color:white;
+    padding: 20px 0;
+    position: end;
+    margin-top:86%;
+  }
+  .footer-row{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .footer-links{
+    width: 25%;
+    padding: 0 15px;
+  }
+  .footer-links h4{
+    font-size: 20px;
+    color: black;
+    margin-bottom: 25px;/*ALEJA EL TITULO DEL TEXTO*/
+   
+    display: inline-block;
+  }
+  .footer-links ul li a {
+    font-size: 18px;
+    text-decoration: none;
+    color:black;
+    display: block;
+    margin-bottom: 15px;
+    transition: all .02s ease;
+    
+  }
+  .footer-links ul li a:hover{
+    color: #fff59d;
+    padding: 5px;
+  }
+
+.spinner {
+    border: 8px solid #f3f3f3; /* Color de fondo */
+    border-top: 8px solid #3498db; /* Color de la parte superior */
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.loader p {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #3498db; /* Color del texto */
+}
+
+h1{
+    color: white;
+    align-items: end;
+}
+.header {
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    /* Alinea verticalmente */
+    justify-content: space-between;
+    /* Espacio entre logo y nav */
+    height: 85px;
+    padding: 5px 5%;
+    background-color: rgb(255, 255, 255);
+}
+
+.header .logo {
+    background-attachment: fixed;
+    margin-right: auto;
+    /* Alinea el logo a la izquierda */
+    flex: 1;
+    /* Hace que el logo ocupe la mitad del header */
+    display: flex;
+    justify-content: center;
+    /* Centra el logo horizontalmente */
+}
+
+.header .logo img {
+    margin-top: 6%;
+    background-attachment: fixed;
+    margin-left: -280px;
+    height: 290px;
+    /* Ajusta la altura del logo */
+    width: 98%;
+    /* Mantiene la proporción de la imagen */
+}
+
+.nav {
+    background-attachment: fixed;
+    margin-left: auto;
+    /* Asegura que la navegación esté a la derecha */
+}
+
+.nav ul {
+    background-attachment: fixed;
+    margin-top: -2%;
+    text-align: right;
+    list-style-type: none;
+    padding: 0;
+}
+
+.nav ul li {
+    background-attachment: fixed;
+    display: inline-block;
+    position: relative;
+    margin: 0 15px;
+}
+
+.nav ul li a {
+    background-attachment: fixed;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+
+.nav ul li a:hover {
+    color: #d10000;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.submenu li {
+    display: block;
+    margin: 0;
+}
+
+.submenu li a {
+    display: block;
+    padding: 5px 10px;
+}
+
+.nav ul li:hover .submenu {
+    display: block;
+}
+/* Efecto de carga */
+.loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(2, 2, 2, 0.8);
+    z-index: 9999;
+    display: none; /* Oculto por defecto */
+    justify-content: center;
+    align-items: center;
+}
+
+.bubble-container {
+    position: relative;
+    width: 100px;
+    height: 100px;
+}
+
+.bubble {
+    position: absolute;
+    bottom: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #4c53af;
+    animation: rise 1s infinite ease-in-out;
+}
+
+.bubble:nth-child(1) {
+    left: 10%;
+    animation-delay: 0s;
+    background: linear-gradient(45deg, rgb(12, 207, 191), pink);
+}
+
+.bubble:nth-child(2) {
+    left: 30%;
+    animation-delay: 0.1s;
+    background: linear-gradient(45deg, red, rgb(255, 0, 242));
+}
+
+.bubble:nth-child(3) {
+    left: 50%;
+    animation-delay: 0.2s;
+    background: linear-gradient(45deg, rgb(32, 223, 197), rgb(170, 33, 56));
+}
+
+.bubble:nth-child(4) {
+    left: 70%;
+    animation-delay: 0.3s;
+}
+
+.bubble:nth-child(5) {
+    left: 90%;
+    animation-delay: 0.4s;
+}
+
+@keyframes rise {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+}
